@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.my_page{
+   height: 982px;
+   width: 1512PX;
+}
+
+
+.my_page,
+.main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.Header{
+    width: 1489px;
+    height: 123px;
+    background: #6C9EFE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.brandname{
+font-size: 40px;
+}
+
+.main{
+    width: 1489px;
+    height: 862px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.username, 
+button,
+.hometext1,
+.hometext2{
+   font-size-adjust: 25px; 
+}
+
+.welcome{
+  font-size: 40px; 
+  margin-top: 60px;
+}
+
+.quote{
+    font-size: 30px; 
+    margin-top: 0px;
+    font-style: italic;
+  }
+
+  .hometext1{
+    margin-top:-150px;
+    text-decoration-line: none;
+    color: black;
+  }
+
+  .hometext2{
+    margin-bottom: 100px;
+  }
+
+  .signin{
+    text-decoration-line: none;
+    color: black;
+  }
+
+  .viagoogle{
+    margin-top: 50px;
+    height: 36px;
+    width: 230px;
+    border-radius: 14px;
+  }
+.Password{
+    margin-bottom: 100px;
+}
+
+#Username{
+ border-radius: 11px;
+ height: 36px;
+ width: 250px;
+ padding-left: 5px;
+}
+
+#Password{
+    border-radius: 11px;
+    height: 36px;
+    width: 200px;
+    padding-left: 5px;
+}
+.login{
+    margin-bottom: 10px;
+    border-radius: 14px;
+    height: 36px;
+    width: 130px;
+    border: none;
+    background-color: #acc1ea;
+}
+.viagoogle{
+  border: none;
+}
+input{
+  border-left: none;
+  border-top: 1px solid rgb(173, 170, 170);
+  border-right: none;
+  border-bottom:  1px solid black;
+}

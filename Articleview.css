@@ -1,0 +1,94 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .my_page{
+    height: 982px;
+    width: 1512PX;
+    padding: 9px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+ }
+
+ .Header{
+    width: 1489px;
+    height: 123px;
+    padding: 0px 30px 0px 80px;
+    background: #6C9EFE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    font-weight: bold;
+}
+
+ .menu{
+    width: 1489px;
+    height: 68px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 350px 20px 20px;
+    margin: 12px 0px 12px 0px;
+    font-weight: bold;
+ }
+
+
+ .rightside {
+    width: 342px;
+    height: 803px;
+    background-color: #D9D9D9;
+    margin-left: auto; /* Push the block to the right side */
+    padding: 3px;
+    display:  flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    align-self: flex-start;
+    line-height: 2;
+    font-size: 20px;
+    border-radius: 11px;
+  }
+  
+ .Main{
+   display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+ }
+
+ .headerlink1{
+   margin-left: 300px;
+ }
+
+
+a{
+   text-decoration: none;
+   color: black;
+}
+.Titles{
+    width: 1489px;
+    height:47px;
+    background-color: #D9D9D9;
+    margin-bottom: 9px;
+    padding-left:50px ;
+    padding-top: 8px;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+button{
+    height: 26px;
+    width: 113px;
+    background-color: #6C9EFE;
+    border-radius: 20px;
+    margin: 25px 0px 0px 65px;
+    font-size: 20px;
+}

@@ -7,22 +7,22 @@
 
   .my_page{
     height: 982px;
-    width: 1512PX;
-    padding: 9px;
+    /* width: 1512PX; */
+    /* padding: 9px; */
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-decoration: none;
  }
 
  .Header{
-    width: 1489px;
-    height: 123px;
-    padding: 0px 30px 0px 80px;
+    /* width: 1489px; */
+    /* height: 123px; */
+    /* padding: 0px 30px 0px 80px; */
     background: #6C9EFE;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     font-weight: bold;
 }
 
@@ -34,7 +34,7 @@
  }
 
  .menu{
-   width: 1489px;
+   /* width: 1489px; */
    height: 68px;
    background-color: #F5F5F5;
    display: flex;
@@ -42,16 +42,16 @@
    align-items: center;
    justify-content: space-around;
    padding: 20px 350px 20px 20px;
-   margin: 12px 0px 12px 0px;
+   /* margin: 12px 0px 12px 0px; */
    font-weight: bold;
  }
 
  .main_center{
-    width: 1489px;
+    /* width: 80%; */
     height: 355px;
-    background-image:url('Icons/Programming\ photo.jpg') ;
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-image:url('Icons/Programming\ photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     font-weight: bolder;
     font-size: 20px;
@@ -72,7 +72,7 @@
  }
 
  .headerlink1{
-   margin-left: 300px;
+   /* margin-left: 300px; */
  }
 
 a{
@@ -81,7 +81,7 @@ a{
 }
 
 .Detail{
-    width: 1489px;
+    /* width: 1489px; */
     height: 332px;
     display: flex;
     flex-direction: row;
@@ -93,8 +93,8 @@ a{
 }
 
 .me{
-    height:264px ;
-    width: 673px;
+    height:264px;
+    /* width: 673px; */
     background-color: #F5F5F5;
     display: flex;
     flex-direction: row;
@@ -105,8 +105,8 @@ a{
    }
 
 .Mission{
-    height:264px ;
-    width: 614px;
+    height:264px;
+    /* width: 614px; */
     background-color: #F5F5F5;
     display: flex;
     flex-direction: row;
@@ -117,8 +117,8 @@ a{
 }
 
 .Left{
-   display: flex;
-   flex-direction:row;
+   /* display: flex; */
+   /* flex-direction:row; */
 }
  .text{
    display: flex;

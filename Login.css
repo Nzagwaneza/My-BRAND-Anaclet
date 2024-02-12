@@ -5,9 +5,9 @@
 }
 
 .my_page{
-   height: 982px;
-   width: 1512PX;
-   padding: 9px;
+  height: 982px;
+  width: 1512PX;
+  padding-top: 9px;
    font-family: 'Montserrat', sans-serif;
    display: flex;
    flex-direction: column;
@@ -86,12 +86,14 @@ font-size: 40px;
     border-radius: 11px;
     height: 36px;
     width: 300px;
+    margin-top: 5px;
 
 }
 #Password{
     border-radius: 11px;
     height: 36px;
     width: 300px;
+    margin: 9px;
 }
 
 .hometext1{
@@ -124,4 +126,153 @@ input {
 input::placeholder {
   text-align: center;
   font-size: 20px; 
+}
+
+/* Mobile Styles */
+@media only screen and (max-width:600px){
+  .my_page{
+    height: auto;
+    max-width: 500px;
+    padding: 6px;
+  }
+.Header{
+  max-width:  500px;
+  height: auto;
+  max-height: 38px;
+  padding: 1px;
+}
+
+img{
+  max-height: 12%;
+  max-width: 12%;
+}
+.main{
+max-width: 80%;
+height: auto;
+padding: 0px;
+text-align: center;
+}
+.quote{
+  font-size: 20px;
+  max-width: max-content;
+}
+
+.welcome{
+  font-size: 27px; 
+  margin: 60px 0px 15px 0px;
+}
+
+.Importantarea{
+  max-width: 350px;
+  height: 500px;
+  font-size: 20px;
+  align-self: center;
+}
+
+input::placeholder, .hometext2, .Password, .login, .signin, .username,
+.hometext1{
+  font-size: 15px;
+} 
+}
+
+/* Tablets Styles */
+@media only screen and (min-width:601px) and (max-width:990px) {
+  .my_page{
+    height: auto;
+    max-width: 990px;
+    padding: 6px;
+  }
+.Header{
+  max-width: 100%;
+  max-height: 80px;
+  padding: 1px;
+}
+
+img{
+  max-height: 100%;
+  max-width: 100%;
+}
+.main{
+max-width: 80%;
+height: auto;
+padding: 0px;
+text-align: center;
+}
+.quote{
+  font-size: 20px;
+  max-width: max-content;
+}
+
+.welcome{
+  font-size: 27px; 
+  margin: 60px 0px 60px 0px;
+}
+
+.Importantarea{
+  max-width: 350px;
+  height: 500px;
+  font-size: 20px;
+  align-self: center;
+}
+
+input::placeholder, .hometext2, .Password, .login, .signin, .username,
+.hometext1{
+  font-size: 15px;
+}
+
+.username{
+  padding-bottom: 2px;
+}
+}
+
+
+
+/* Desktop and big screens Styles */
+@media only screen and (min-width:991px) {
+  .my_page{
+    height: auto;
+    min-width: 100.001%;
+    padding: 6px;
+  }
+.Header{
+  min-width: 100.001%;
+  min-height: 81px;
+  padding: 1px;
+}
+
+img{
+  height: 80%;
+  width: 15%;
+}
+.main{
+min-width: 81%;
+height: auto;
+padding: 0px;
+text-align: center;
+}
+.quote{
+  font-size: 20px;
+  max-width: max-content;
+}
+
+.welcome{
+  font-size: 27px; 
+  margin: 60px 0px 15px 0px;
+}
+
+.Importantarea{
+  min-width: 351px;
+  height: auto;
+  font-size: 20px;
+  align-self: center;
+}
+
+input::placeholder, .hometext2, .Password, .login, .signin, .username,
+.hometext1{
+  font-size: 15px;
+}
+
+.username{
+  padding-bottom: 2px;
+}
 }

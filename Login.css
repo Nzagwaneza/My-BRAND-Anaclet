@@ -7,13 +7,13 @@
 .my_page{
   height: 982px;
   width: 1512PX;
-  padding-top: 9px;
-   font-family: 'Montserrat', sans-serif;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   background-color: aliceblue;
+  /* padding-top: 9px; */
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
 }
 
 
@@ -232,7 +232,7 @@ input::placeholder, .hometext2, .Password, .login, .signin, .username,
   .my_page{
     height: auto;
     min-width: 100.001%;
-    padding: 6px;
+    /* padding: 6px; */
   }
 .Header{
   min-width: 100.001%;
@@ -242,7 +242,7 @@ input::placeholder, .hometext2, .Password, .login, .signin, .username,
 
 img{
   height: 80%;
-  width: 15%;
+  /* width: 15%; */
 }
 .main{
 min-width: 81%;

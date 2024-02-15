@@ -1,49 +1,37 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .my_page{
-    height: 982px;
-    /* width: 1512PX; */
-    /* padding-top: 9px; */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
- }
-
- .Header{
-    /* width: ; */
-    /* height: 123px; */
-    /* padding: 0px 30px 0px 80px; */
-    padding: 12px;
-    background: #6C9EFE;
-    /* margin-left: 9px; */
-    font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
+.my_page{
+  height: 982px;
+  /* width: 1512PX; */
+  /* padding-top: 9px; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
 }
+
+.Header{
+  /* width: ; */
+  /* height: 123px; */
+  /* padding: 0px 30px 0px 80px; */
+  padding: 12px;
+  background: #6C9EFE;
+  /* margin-left: 9px; */
+  font-weight: bold;
+}
+
+.header-menu {display: flex;flex-direction: row;align-items: center;width: 100%;justify-content: space-between;}
 
 .header-menu-small {
-  display: none;
+display: none;
 }
 
-.header-menu-large {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-}
-
+.header-menu-large {display: flex;justify-content: space-between;align-items: center;width: 50%;}
 
  .profilepic{
     width: 100px;

@@ -5,27 +5,44 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   .my_page{
     height: 982px;
-    width: 1512PX;
-    padding: 9px;
+    /* width: 1512PX; */
+    /* padding-top: 9px; */
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-decoration: none;
- }
-
- .Header{
-    width: 1489px;
-    height: 123px;
-    padding: 0px 30px 0px 80px;
+  }
+  
+  .Header{
+    /* width: ; */
+    /* height: 123px; */
+    /* padding: 0px 30px 0px 80px; */
+    padding: 12px;
     background: #6C9EFE;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
+    /* margin-left: 9px; */
     font-weight: bold;
-}
+  }
+  
+  .header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  }
+  
+  .header-menu-small {
+  display: none;
+  }
+  
+  .header-menu-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  }
 
 .Authorpic{
     width: 70px;
@@ -40,20 +57,20 @@
  }
 
  .menu{
-    width: 1489px;
+    width: 100%;
     height: 68px;
     background-color: #F5F5F5;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 350px 20px 20px;
-    margin: 12px 0px 12px 0px;
+    /* padding: 20px 350px 20px 20px; */
+    /* margin: 12px 0px 12px 0px; */
     font-weight: bold;
  }
 
  .main_area{
-    width: 940px;
+    width: 80%;
     height: 586px;
     margin-left: 10px 10px 10px 0px;
     display: flex;
@@ -62,34 +79,34 @@
     align-items: flex-start;
     align-content: flex-start;
     line-height: 2;
-
  }
 
  .rightside {
-    width: 342px;
+    width: 20%;
+    font-size: medium;
     height: 803px;
-    background-color: #D9D9D9;
-    margin-left: auto; /* Push the block to the right side */
+    background-color: #e4e1e1;
+     /* Push the block to the right side */
     padding: 3px;
-    display:  flex;
-    flex-direction: column;
+    /* display:  flex; */
+    /* flex-direction: column; */
     justify-content: flex-start;
     align-items: flex-start;
     text-align: center;
     align-self: flex-start;
-    line-height: 2;
-    font-size: 20px;
-    border-radius: 11px;
+    /* line-height: 2; */
+    /* border-radius: 11px; */
   }
   
  .Main{
+   Height: 20%;
    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+   flex-direction: row;
+   /* align-items: flex-start; */
  }
 
  .headerlink1{
-   margin-left: 300px;
+   /* margin-left: 300px; */
  }
 
 
@@ -98,11 +115,11 @@ a{
    color: black;
 }
 .Titles{
-    width: 1489px;
+    /* width: 1489px; */
     height:47px;
     background-color: #D9D9D9;
-    margin-bottom: 9px;
-    padding-left:50px ;
+    /* margin-bottom: 9px; */
+    padding-left:50px;
     padding-top: 8px;
     font-weight: bolder;
     text-align: justify;
@@ -110,8 +127,8 @@ a{
 
 
 .forAll_Articles{
-    width: 1138px;
-    height: 233px;
+    width: 100%;
+    /* height: 233px; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -122,35 +139,35 @@ a{
 }
 
 .Articlephoto1{
-    width: 285px;
-    height: 185px;
+    width: 30%;
+    height: 100%;
     background-image: url('Icons/For\ article\ 1.png');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Articlephoto2{
-    width: 285px;
-    height: 185px;
+    width: 30%;
+    height: 100%;
     background-image: url('Icons/pic\ for\ article\ 2.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Articlephoto3{
-    width: 285px;
-    height: 185px;
+    width: 30%;
+    height: 100%;
     background-image: url('Icons/Figma-overview.png');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Articlephoto4{
-    width: 285px;
-    height: 185px;
+    width: 30%;
+    height: 100%;
     background-image: url('Icons/github-cover.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .description{
     display: flex;
@@ -177,4 +194,61 @@ button{
     border-radius: 20px;
     margin: 25px 0px 0px 65px;
     font-size: 20px;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .my_page {
+      height: auto;
+      max-width: 600px;
+      padding: 3px;
+  }
+
+  .header-menu-small {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profilepic {
+      grid-column: 3 / span 2;
+      grid-row: 1;
+      height: 40px;
+      width: 40px;
+
+}
+
+}
+
+
+/* Tablets Styles */
+@media only screen and (min-width:601px) and (max-width:990px) {
+.my_page{
+  height: auto;
+  /* max-width: 100%; */
+  padding: 6px;
+  display: flex;
+  flex-direction:column;
+}
+.Header{
+max-width: 100%;
+/* max-height: 80px; */
+padding: 12px;
+font-size: 15px;
+}
+
+.header-menu-large {
+display: none;
+}
+
+.header-menu-small {
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+
+}
+
 }

@@ -1,56 +1,64 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .my_page{
-    height: 982px;
-    width: 1512PX;
-    padding: 9px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
- }
-
- .Header{
-    width: 1489px;
-    height: 123px;
-    padding: 0px 30px 0px 80px;
-    background: #6C9EFE;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-    font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- .menu{
-    width: 1489px;
-    height: 68px;
-    background-color: #F5F5F5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px 350px 20px 20px;
-    margin: 12px 0px 12px 0px;
-    font-weight: bold;
- }
+.my_page{
+  height: 982px;
+  /* width: 1512PX; */
+  /* padding-top: 9px; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
 
- 
- .profilepic{
+.Header{
+  /* width: ; */
+  /* height: 123px; */
+  /* padding: 0px 30px 0px 80px; */
+  padding: 12px;
+  background: #6C9EFE;
+  /* margin-left: 9px; */
+  font-weight: bold;
+}
+
+.header-menu {display: flex;flex-direction: row;align-items: center;width: 100%;justify-content: space-between;}
+
+.header-menu-small {display: none;}
+
+.header-menu-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  }
+
+.profilepic{
   width: 100px;
   height: 80px;
   border-radius: 50%;
 }
 
+.menu{
+  /* width: 940px; */
+  height: 68px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  /* margin: 12px 0px 12px 9px; */
+  font-weight: bold;
+}
+
 
 .art_right{
-    width: 342px;
-    height: 803px;
+    width: 80%;
+    height: 80%;
     background-color: #D9D9D9;
     padding: 3px;
     display:  flex;
@@ -58,7 +66,7 @@
     justify-content: flex-start;
     text-align: center;
     line-height: 2;
-    font-size: 20px;
+    font-size: small;
     border-radius: 11px;
   }
   
@@ -66,36 +74,45 @@
    display: flex;
    justify-content: flex-start;
    flex-direction: row;
-   align-content: flex-start;
-   align-items: flex-start;
+   /* align-content: flex-start; */
+   /* align-items: flex-start; */
+ }
+
+ .Big_Main{
+     display: flex;
+     justify-content: flex-start;
+     flex-direction: row;
  }
 
  .art_left{
-   height:100%;
-   width:100px ;
+   display: flex;
+   flex-direction: column;
    position: relative;
+   font-size: 15px;
    top: 200px;
+   padding-left: 1%;
+   width: 12%;
  }
    .supermain{
-      height:737px ;
-      width:1090px ;
+      height:737px;
+      /* width:1090px ; */
       padding: 0px 20px;
       display: flex;
  }
 
  .art_center{
-  height:803px ;
-  width:960px ;
-  padding: 0px 20px;
-  margin-right: 13px;
+  height:803px;
+  /* width:960px ; */
+  padding: 0px 0% 0% 15%;
+  /* margin-right: 13px; */
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
  .headerlink1{
-   margin-left: 300px;
+   /* margin-left: 300px; */
  }
 
 
@@ -104,11 +121,11 @@ a{
    color: black;
 }
 .Titles{
-    width: 1489px;
-    height:47px;
+    /* width: 1489px; */
+    height: 5%;
     background-color: #D9D9D9;
-    margin-bottom: 9px;
-    padding-left:50px ;
+    /* margin-bottom: 9px; */
+    padding-left:50px;
     padding-top: 8px;
     font-weight: bolder;
     text-align: justify;
@@ -125,15 +142,14 @@ button{
 
  
 .AuthorPic{
-  width: 120px;
+  /* width: 120px; */
   height: 140px;
   border-radius: 50%;
   padding: 12px;
 }
 
 .AuthorInfo{
-  
-  width: 220px;
+  width: 20%;
   height:auto;
   position: relative;
   top: 80px;
@@ -149,4 +165,63 @@ button{
   display: flex;
   justify-content: space-around;
   width: 400px;
+}
+
+
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  .my_page {
+      height: auto;
+      max-width: 600px;
+      padding: 3px;
+  }
+
+  .header-menu-small {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profilepic {
+      grid-column: 3 / span 2;
+      grid-row: 1;
+      height: 40px;
+      width: 40px;
+
+}
+
+}
+
+
+/* Tablets Styles */
+@media only screen and (min-width:601px) and (max-width:990px) {
+.my_page{
+  height: auto;
+  /* max-width: 100%; */
+  padding: 6px;
+  display: flex;
+  flex-direction:column;
+}
+.Header{
+max-width: 100%;
+/* max-height: 80px; */
+padding: 12px;
+font-size: 15px;
+}
+
+.header-menu-large {
+display: none;
+}
+
+.header-menu-small {
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+
+}
+
 }

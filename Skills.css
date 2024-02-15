@@ -1,59 +1,92 @@
+
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .my_page{
-    height: 982px;
-    width: 1512PX;
-    padding: 9px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
  }
 
- .Header{
-    width: 1489px;
-    height: 123px;
-    padding: 0px 30px 0px 80px;
-    background: #6C9EFE;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-    font-weight: bold;
- }
+ .my_page{
+   height: 982px;
+   /* width: 1512PX; */
+   /* padding-top: 9px; */
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   text-decoration: none;
+}
 
-.headerlink1{
-    margin-left: 300px;
-  }
- .profilepic{
+.Header{
+   /* width: ; */
+   /* height: 123px; */
+   /* padding: 0px 30px 0px 80px; */
+   padding: 12px;
+   background: #6C9EFE;
+   /* margin-left: 9px; */
+   font-weight: bold;
+}
+
+.header-menu {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ width: 100%;
+ justify-content: space-between;
+}
+
+.header-menu-small {
+ display: none;
+}
+
+.header-menu-large {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 50%;
+}
+
+
+.profilepic{
    width: 100px;
    height: 80px;
-    border-radius: 50%;
- }
+   border-radius: 50%;
+}
 
- .menu{
-    width: 1489px;
-    height: 68px;
-    background-color: #F5F5F5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px 350px 20px 20px;
-    margin: 12px 0px 12px 0px;
-    font-weight: bold;
+.menu{
+   /* width: 940px; */
+   height: 68px;
+   background-color: #F5F5F5;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   padding: 20px;
+   /* margin: 12px 0px 12px 9px; */
+   font-weight: bold;
+}
 
- }
+.main_area{
+   /* width: 939px; */
+   height: 586px;
+   background-image: url('Icons/background.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* margin-left: 10px; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 180px 0px 0px 380px;
+   line-height: 2;
+   color: white;
+}
+
 
  .lowerside{
-    width: 1489px;
+    /* width: 1489px; */
     height: 747px;
-   padding: 18px;
+    padding: 18px;
     background-image: url('Icons/back_for_My_skills.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -96,4 +129,62 @@ a{
 
 .My_icons{
  font-size: 50px;
+}
+
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+   .my_page {
+       height: auto;
+       max-width: 600px;
+       padding: 3px;
+   }
+
+   .header-menu-small {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 100%;
+   }
+
+   .profilepic {
+       grid-column: 3 / span 2;
+       grid-row: 1;
+       height: 40px;
+       width: 40px;
+
+ }
+
+}
+
+
+/* Tablets Styles */
+@media only screen and (min-width:601px) and (max-width:990px) {
+ .my_page{
+   height: auto;
+   /* max-width: 100%; */
+   padding: 6px;
+   display: flex;
+   flex-direction:column;
+ }
+.Header{
+ max-width: 100%;
+ /* max-height: 80px; */
+ padding: 12px;
+ font-size: 15px;
+}
+
+.header-menu-large {
+ display: none;
+}
+
+.header-menu-small {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+
+}
+
 }

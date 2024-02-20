@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .my_page{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    height: 100vh;
+    text-decoration: none;
+  }
+
+  #home{
+    height: 50px;
+    width: 60px;
+  }
+  
+  .Header{
+    padding: 12px;
+    background: #6C9EFE;
+    font-weight: bold;
+  }
+  
+  .profilepic{
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+ }
+
+ .main{
+  display: flex;
+  width: 100%;
+  padding-top: 1%;
+  background-color: #f8f8ff;
+ }
+
+ .mainLeft{
+  width: 44.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1vw;
+ }
+
+ .mainRight{
+  width: 55vw;
+  /* background-color: bisque; */
+ }
+
+ #Summary{
+  width:54vw;
+  height: 10vh;
+  margin: 0 1%;
+ }
+
+ #articleText{
+  width:54vw;
+  height: 60vh;
+ }
+
+ #topInputs{
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+#bottomInput{
+  text-align: center;
+}
+
+#bottomInput{
+  display: block;
+  margin: 0 auto;
+}
+
+#Logout{
+  width:12%;
+  display: flex;
+  align-self: center;
+}
+
+#aboutArtice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: black solid;
+  padding: 2%;
+}
+
+button.Add, .Edit, .Delete {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  margin-left: 2vw;
+}
+
+.menu{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 5%;
+  justify-content: center;
+  padding: 2%;
+}
+
+footer{
+  background-color: #6C9EFE;
+  height: 3vh;
+}
+
+.AdminPic{
+  width: fit-content;
+  height: 100%;
+  border-radius: 66%;
+  padding: 12px;
+}
+
+#admin{
+  height: 10%;
+  margin-bottom: 8vh;
+}
+
+
+
+
+
+
+<figure id="admin">
+<img class="AdminPic" src="Icons/NZAGWANEZA Anaclet -Passport.jpg" alt="Profile Picture" caption="Admin"/>
+<figcaption>  Admin</figcaption>
+</figure>
+

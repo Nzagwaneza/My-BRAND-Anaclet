@@ -1,0 +1,51 @@
+#myModal{
+    height: 450px;
+    width: 280px;
+    border: rgb(0, 0, 0) solid;
+    padding: 1%;
+    display: flex;
+    position:-ms-page;
+    flex-direction: column;
+    border-radius: 14px;
+    background-color: #ecf1f9;
+}
+
+#closeModal{
+    float: right;
+    font-size: 40px;
+    color: red;
+    font-weight: 900;
+}
+
+input{
+    margin: 5% 0% 5% 0%;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 06px;
+    border: none;
+    height: 3vh;
+    background-color: white;
+}
+
+textarea{
+    border-radius: 2%;
+    font-size: 16px;
+    width: 100%;
+    
+}
+
+button{
+    width: 32%;
+    border-radius: 15%;
+    align-self: center;
+    margin-top: 2%;
+    margin-left: 33%;
+    color: white;
+    background-color: rgb(70, 70, 107);
+    align-self: center;
+    padding: 1%;
+}
+
+h1{
+    font-size: 18px;
+}

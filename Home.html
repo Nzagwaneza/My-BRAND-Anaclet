@@ -15,7 +15,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
     />
-
     <title>Anaclet_Homepage</title>
   </head>
 
@@ -26,7 +25,7 @@
         <div class="header-menu-large">
           <a href="Login.html" class="headerlink1">Login</a>
           <a href="" class="headerlink2">Subscribe</a>
-          <a href="" class="headerlink3">Contact Me</a>
+          <button id="openModal" class="headerlink3">Contact Me</button>
         </div>
         <img
           class="profilepic"
@@ -37,9 +36,10 @@
       <div class="header-menu-small">
         <a href="Login.html" class="headerlink1">Login</a>
         <a href="" class="headerlink2">Subscribe</a>
-        <a href="" class="headerlink3">Contact Me</a>
+        <a href="#" id="contact_link_small" class="headerlink3">Contact Me</a>
       </div>
     </div>
+    <div id="modalContainer"></div>
     <div class="Main">
       <div class="leftside">
         <div class="menu">
@@ -79,12 +79,13 @@
       <div class="follow_me">
         <span>Follow me on </span>
         <ul class="icon-list">
-          <li><i class="fa-brands fa-linkedin" style="color: #323287"></i></li>
-          <li><i class="fa-brands fa-x-twitter"></i></li>
-          <li><i class="fa-brands fa-youtube" style="color: #b61021"></i></li>
-          <li><i class="fa-brands fa-facebook" style="color: #204483"></i></li>
+          <li><i id="linkedin" class="fab fa-linkedin"></i></li>
+          <li><i id="twitter" class="fab fa-twitter"></i></li>
+          <li><i id="youtube" class="fab fa-youtube"></i></li>
+          <li><i id="facebook"><i class="fab fa-facebook"></i></li>
         </ul>
       </div>
     </div>
+    <script src="Homepage.js"></script>
   </body>
 </html>

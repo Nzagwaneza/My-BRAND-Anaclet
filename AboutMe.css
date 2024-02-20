@@ -34,8 +34,8 @@ display: none;
 .header-menu-large {display: flex;justify-content: space-between;align-items: center;width: 50%;}
 
  .profilepic{
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: 65px;
     border-radius: 50%;
  }
 

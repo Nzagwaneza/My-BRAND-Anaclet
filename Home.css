@@ -31,7 +31,9 @@ display: none;
   width: 70px;
   height: 65px;
   border-radius: 50%;
+  object-fit: cover;
 }
+
 
  .menu{
     height: 68px;

@@ -1,27 +1,40 @@
-// Function to fetch and insert the modal content
-function loadModalContent() {
-    fetch('modal.html', { mode: 'no-cors' })
- // Fetch the modal content HTML file
-      .then(response => response.text()) // Convert response to text
-      .then(data => {
-        document.getElementById('modalContainer').innerHTML = data; // Insert modal content into the modal container
-        showModal(); // Call the function to show the modal after it's loaded
-      })
-      .catch(error => console.error('Error fetching modal content:', error));
+var modal= document.getElementById("myModal");
+var bouton=  document.getElementById("openModal");
+var span= document.getElementById("closeModal");
+
+bouton.onclick = function () {
+modal.style.display= "block";
+}
+
+
+span.onclick = function () {
+  modal.style.display= "none";
   }
+
+  window.onclick = function (event) {
+    if(event.target == modal){
+    modal.style.display= "none";
+    }
+    }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModalsubscribe");
+    var openSubscribeBtn = document.getElementById("openSubscribe");
+    var closeModalBtn = document.getElementById("closeModalsubscribe");
   
-  // Function to show the modal
-  function showModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block"; // Show the modal
-  }
+    openSubscribeBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      modal.style.display = "block";
+    });
   
-  // Function to close the modal
-  function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none"; // Hide the modal
-  }
+    closeModalBtn.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
   
-  // Open the modal when the button is clicked
-  document.getElementById("openModal").addEventListener("click", loadModalContent);
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
   

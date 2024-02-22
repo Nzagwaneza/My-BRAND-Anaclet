@@ -37,10 +37,10 @@ display: none;
     width: 70px;
     height: 65px;
     border-radius: 50%;
+    object-fit: cover;
  }
 
  .menu{
-   /* width: 1489px; */
    height: 68px;
    background-color: #F5F5F5;
    display: flex;
@@ -48,12 +48,10 @@ display: none;
    align-items: center;
    justify-content: space-around;
    padding: 20px 350px 20px 20px;
-   /* margin: 12px 0px 12px 0px; */
    font-weight: bold;
  }
 
  .main_center{
-    /* width: 80%; */
     height: 355px;
     background-image:url('Icons/Programming\ photo.jpg');
     background-size: cover;
@@ -77,9 +75,7 @@ display: none;
    flex-direction:  column;
  }
 
- .headerlink1{
-   /* margin-left: 300px; */
- }
+
 
 a{
    text-decoration: none;
@@ -87,7 +83,6 @@ a{
 }
 
 .Detail{
-    /* width: 1489px; */
     height: 332px;
     display: flex;
     flex-direction: row;
@@ -99,8 +94,6 @@ a{
 }
 
 .me{
-    /* height:264px; */
-    /* width: 673px; */
     background-color: #F5F5F5;
     display: flex;
     flex-direction: row;
@@ -112,8 +105,6 @@ a{
    }
 
 .Mission{
-    /* height:264px; */
-    /* width: 614px; */
     background-color: #F5F5F5;
     display: flex;
     flex-direction: row;
@@ -124,10 +115,6 @@ a{
     border-radius: 14px;
 }
 
-.Left{
-   /* display: flex; */
-   /* flex-direction:row; */
-}
  .text{
    display: flex;
    flex-direction: row;

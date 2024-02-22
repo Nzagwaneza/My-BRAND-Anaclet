@@ -6,7 +6,6 @@
 
 .my_page{
   width: 100%;
-  height: 100%;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
@@ -14,8 +13,6 @@
   justify-content: center;
   background-color: aliceblue;
 }
-
-
 
 .Header{
     width: 100%;
@@ -25,24 +22,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 
 .brandname{
-font-size: 40px;
+  font-size: 40px;
 }
 
 .main{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 80px;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#Username{
+  border-radius: 11px;
+  height: 36px;
+  width: 95%;
+  margin-top: 5px;
+  margin: 5px auto;
+
+}
+#Password{
+  border-radius: 11px;
+  height: 36px;
+  width: 95%;
+  margin: 9px;
+  margin: 5px auto;
+}
+
+
+#ConfirmPassword{
+  border-radius: 11px;
+  height: 36px;
+  width: 95%;
+  margin: 9px;
+  margin: 5px auto;
 }
 
 .Importantarea{
-  width: 35vw;
+  width: 25vw;
   height: 55vh;
   background: #ffffff;
   display: flex;
@@ -61,7 +82,7 @@ font-size: 40px;
  button,
 .hometext1,
 .hometext2{
-   font-size: 15px; 
+   font-size: 15px;
 }
 
 .welcome{
@@ -72,53 +93,11 @@ font-size: 40px;
 .quote{
     font-size: 20px; 
     font-style: italic;
-  }
-
-
-  .signin, .hometext1 {
-    text-decoration-line: none;
-    color: black;
-  }
-
-#Username{
-    border-radius: 11px;
-    height: 36px;
-    width: 95%;
-    margin-top: 5px;
-    margin: 5px auto;
-
-}
-#Password{
-    border-radius: 11px;
-    height: 36px;
-    width: 95%;
-    margin: 9px;
-    margin: 5px auto;
 }
 
-.hometext1{
-  padding-bottom: 130px;
-}
-
-.login{
-    border-radius: 14px;
-    height: 36px;
-    width: 130px;
-    background-color: #224282;
-    color: #ffffff;
-}
-
-input {
-  border: 1px solid rgb(173, 170, 170);
-  border-bottom: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px; 
-  padding-bottom: 10px; 
-  line-height: 1.5; 
-  text-align: center;
-  font-size: 15px; 
+.signin, .hometext1 {
+  text-decoration-line: none;
+  color: black;
 }
 
 input[type="text"], input[type="password"], button {
@@ -137,14 +116,48 @@ input::placeholder {
 }
 
 #errorBlock {
-    color: red;
-    margin-top: 5px;
-    font-size: 16px;
+  color: red;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.signup{
+  margin-bottom: 40px;
+  border-radius: 14px;
+  height: 36px;
+  width: 130px;
+  background-color: #224282;
+  color: #ffffff;
 }
 
 #goHome {
   position: fixed;
   bottom: 20px; 
   left: 20px; 
-  color: black;
+  color: rgb(12, 3, 3);
+  text-decoration: none;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width:600px){
+  .welcome{
+    font-size: 27px; 
+    margin: 60px 0px 15px 0px;
+  }
+}
+
+/* Tablets Styles */
+@media only screen and (min-width:601px) and (max-width:990px) {
+  .welcome{
+    font-size: 27px; 
+    margin: 60px 0px 60px 0px;
+  }
+}
+
+/* Desktop and big screens Styles */
+@media only screen and (min-width:991px) {
+  .welcome{
+    font-size: 27px; 
+    margin: 60px 0px 15px 0px;
+  }
 }

@@ -10,7 +10,6 @@
     />
     <title>Contact me</title>
   </head>
-
   <body>
     <div id="myModal">
       <div>
@@ -27,6 +26,7 @@
             placeholder="Your Name"
             required
           />
+          <span id="nameError" class="error"></span>
         </div>
         <div class="form-Email">
           <label for="email">Email</label>
@@ -37,6 +37,7 @@
             placeholder="jozy@example.com"
             required
           />
+          <span id="emailError" class="error"></span>
         </div>
         <div class="form-Message">
           <label for="message">Message</label>
@@ -48,10 +49,12 @@
             placeholder="Write your message here"
             required
           ></textarea>
+          <span id="messageError" class="error"></span>
         </div>
         <button type="submit" id="submitBtn">Send</button>
       </form>
     </div>
     <script src="Homepage.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+.modalsubscribe {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:47% ;
+    top: 12%;
+    width: 37%;
+    height: 14%;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    padding: 9px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 14px;
+  }
+  
+  .closesubscribe {
+    color: #e54545;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #subscribeForm{
+    display: flex;
+    flex-direction: row;
+  }
+  input{
+    width: 50%;
+    background-color: aliceblue;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  button{
+    width: 26%;
+    border-radius: 14%;
+    align-self: center;
+    margin-top: 2%;
+    color: white;
+    background-color: rgb(151, 151, 247);
+    align-self: center;
+    padding: 1%;
+  }

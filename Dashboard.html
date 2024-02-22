@@ -21,63 +21,72 @@
 
   <body class="my_page">
     <div class="Header">
-      <i
-        id="home"
-        class="fa-sharp fa-solid fa-house-person-return"
-        style="color: #050406"
-      ></i>
       <img class="profilepic" src="Icons/logo.JPG" alt="Profile Picture" />
-      <span>DASHBOARD</span>
+      <h1 class="dashboard-title">DASHBOARD</h1>
     </div>
     <div class="main">
       <div class="mainLeft">
-           
         <div id="aboutArtice">
           <span><strong>Manage Article</strong></span>
-          <button class="Add">Add Article</button>
-          <button class="Edit">Edit ARticle</button>
-          <button class="Delete">Delete article</button>
+          <button class="Add"><i class="fas fa-plus"></i> Add Article</button>
+          <button class="Edit"><i class="fas fa-edit"></i> Edit Article</button>
+          <button class="Delete">
+            <i class="fas fa-trash-alt"></i> Delete Article
+          </button>
         </div>
         <div>
-          <a  class="menu" id="users" href=""><strong>Manage users</strong></a>
+          <a class="menu" id="users" href=""
+            ><i class="fas fa-users"></i> <strong>Manage users</strong></a
+          >
         </div>
         <div>
-          <a class="menu" id="statistics" href=""><strong>Statistics</strong></a>
+          <a class="menu" id="statistics" href=""
+            ><i class="fas fa-chart-bar"></i> <strong>Statistics</strong></a
+          >
         </div>
-        <div> 
-          <a class="menu" id="message" href=""><strong>Mesages</strong></a>
+        <div>
+          <a class="menu" id="message" href=""
+            ><i class="fas fa-envelope"></i> <strong>Messages</strong></a
+          >
         </div>
-        <button id="Logout">Logout</button>
+        <button class="Logout" id="Logout">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
       </div>
       <div class="mainRight">
         <div id="topInputs">
           <input type="text" id="textTitle" placeholder="Enter the title" />
-          <input type="text" id="textCategory" placeholder="Select category" />
+          <label for="profilePicture">Upload Profile Picture</label>
+          <input type="file" id="profilePicture" accept="image/*" />
         </div>
         <div id="middleInput">
           <textarea
             name=""
             id="Summary"
-            placeholder="write the Article's Summary"
+            placeholder="Write the Article's Summary"
           ></textarea>
+        </div>
         <div id="bottomInput">
           <div id="bottomText">
             <textarea
               name=""
               id="articleText"
-              placeholder="write the Article"
+              placeholder="Write the Article"
             ></textarea>
           </div>
         </div>
         <div id="bottomInput">
-          <button id="submitButton">Submit</button>
+          <button id="submitButton">
+            <i class="fas fa-paper-plane"></i> Submit
+          </button>
         </div>
       </div>
-      <div>
-        <footer>
-          <span>&copy; Anaclet's Brand. All rights reserved.</span>
-        </footer></div>
     </div>
+    <div id="goHome">
+      <a href="Home.html"> <i class="fas fa-home fa-2x"></i></a>
+    </div>
+    <footer>
+      <span>&copy; Anaclet's Brand. All rights reserved.</span>
+    </footer>
   </body>
 </html>
-I hope this email finds you well. 

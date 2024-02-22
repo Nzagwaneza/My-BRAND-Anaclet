@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="Subscribe.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -24,8 +26,65 @@
         <img class="brandname" src="Icons/logo.JPG" alt="Logo" />
         <div class="header-menu-large">
           <a href="Login.html" class="headerlink1">Login</a>
-          <a href="" class="headerlink2">Subscribe</a>
-          <button id="openModal" class="headerlink3">Contact Me</button>
+          <a href="" id="openSubscribe" class="headerlink2">Subscribe</a>
+          <!--subscribe-->
+          <div id="myModalsubscribe" class="modalsubscribe">
+            <div class="modal-content">
+              <span id="closeModalsubscribe" class="closesubscribe">&times;</span>
+              <h4>Subscribe to this Brand</h4>
+              <form id="subscribeForm">
+                <input type="email" name="email" placeholder="Your Email" required />
+                <button type="submitsubscribe">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <!--end-subscribe-->
+          <span id="openModal" class="headerlink3">Contact Me</span>
+         <!--Modal content-->
+          <div id="myModal" class="modal">
+            <div>
+              <span id="closeModal">&times;</span>
+            </div>
+            <h1>Get in touch with me</h1>
+            <form id="contactForm" action="#" method="post">
+              <div class="form-Name">
+                <label for="full-name">Name</label>
+                <input
+                  id="full-name"
+                  name="full-name"
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                />
+                <span id="nameError" class="error"></span>
+              </div>
+              <div class="form-Email">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="jozy@example.com"
+                  required
+                />
+                <span id="emailError" class="error"></span>
+              </div>
+              <div class="form-Message">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Write your message here"
+                  required
+                ></textarea>
+                <span id="messageError" class="error"></span>
+              </div>
+              <button type="submit" id="submitBtn">Send</button>
+            </form>
+          </div>
+          <!--the end of the modal content-->
         </div>
         <img
           class="profilepic"
@@ -87,5 +146,6 @@
       </div>
     </div>
     <script src="Homepage.js"></script>
+    <script src="Subscribe.js"></script>
   </body>
 </html>

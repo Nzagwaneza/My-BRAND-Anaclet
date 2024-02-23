@@ -1,75 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Articleview.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Articleview.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+    />
 
-        <title>My Brand Anaclet_Articles</title>
-    </head>
-
-    <body class="my_page">
-        <div class="Header">
-        <img class="brandname" src="Icons/logo.JPG" alt="Logo">
-        <a href="Login.html" class="headerlink1">Edit</a>
+    <title>My Brand Anaclet_Articles</title>
+  </head>
+  <body class="my_page">
+    <div class="Header">
+      <div class="header-menu">
+        <img class="brandname" src="Icons/logo.JPG" alt="Logo" />
+        <div class="header-menu-large">
+          <a href="Login.html" class="headerlink1">Login</a>
+          <a href="" class="headerlink2">Subscribe</a>
+          <a href="" class="headerlink3">Contact Me</a>
+        </div>
+        <img
+          class="profilepic"
+          src="Icons/profilePic1.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="header-menu-small">
+        <a href="Login.html" class="headerlink1">Login</a>
         <a href="" class="headerlink2">Subscribe</a>
         <a href="" class="headerlink3">Contact Me</a>
-        <img class="profilepic" src="Icons/profilePic1.jpg" alt="Profile Picture">
-        </div>
-        <div class="Main">
-            <div class="upperside">
-                <div class="menu">
-                    <a href="Home.html">Home</a>
-                    <a href="AboutMe.html">About Me</a>
-                    <a href="Skills.html">My skills</a>
-                    <a href="Articles.html">Articles</a>
-                </div>  
-            </div>
+      </div>
+    </div>
+    <div class="Main">
+      <div class="leftside">
+        <div class="menu">
+          <a href="Home.html">Home</a>
+          <a href="AboutMe.html">About Me</a>
+          <a href="Skills.html">My skills</a>
+          <a href="Articles.html">Articles</a>
         </div>
         <div class="Titles">
-                <span><strong>The list of articles</strong></span>
+          <span><strong>The list of articles</strong></span>
         </div>
-        <div class="Main">
-            <div class="art_left">
-                <span>Share <i class="fa-solid fa-square-share-nodes"></i></span>
+        <div class="art_left">
+          <span id="share" onclick="shareOnSocialMedia()"
+            >Share <i class="fa-solid fa-square-share-nodes"></i
+          ></span>
+          <span id="like" onclick="incrementLike()">
+            Like <i class="fa-solid fa-thumbs-up"> 0</i>
+          </span>
+          <span id="dislike" onclick="incrementDislike()"
+            >Dislike <i class="fa-solid fa-thumbs-down"> 0</i>
+          </span>
+          <span>
+            <a href="#" id="comment"><strong>Add a comment...</strong></a>
+          </span>
+        </div>
+        <div class="supermain">
+          <div class="art_center">
+            <div class="title">
+              <strong>My journal in coding life</strong>
             </div>
-            <div class="supermain">
-                <div class="art_center">
-                    <div class="title">
-                        <strong>My journal in coding life</strong>
-                    </div>
-                        <div><p>Once upon a time, I walked the halls of hospitals in the noble profession of nursing. The world of healthcare was my domain, and caring for others was my daily rhythm. Little did I know that my path would take a fascinating turn, leading me into the intricate world of coding. <br> <br>
+            <div>
+              <div class="combinedparagraph">
+                <div class="first_paragraph">
+                  Once upon a time, I walked the halls of hospitals in the noble
+                  profession of nursing. The world of healthcare was my domain,
+                  and caring for others was my daily rhythm. Little did I know
+                  that my path would take a fascinating turn, leading me into
+                  the intricate world of coding. As a nurse, I witnessed
+                  firsthand the impact technology had on patient care.It was
+                  during those moments, surrounded by beeping machines and
+                  digital records, that I felt a spark of curiosity.
+                </div>
+                <div class="AuthorInfo">
+                  <img
+                    class="AuthorPic"
+                    src="Icons/NZAGWANEZA Anaclet -Passport.jpg"
+                    alt="Profile Picture"
+                  />
+                  <span
+                    ><strong>Anaclet Nzagwaneza</strong> <br /><em
+                      >A full stuck enginineer.</em
+                    ></span
+                  >
+                </div>
+              </div>
 
-                            As a nurse, I witnessed firsthand the impact technology had on patient care. It was during those moments, surrounded by beeping machines and digital records, that I felt a spark of curiosity. What if I could contribute to healthcare not only at the bedside but also behind the scenes, shaping the very tools that enhance the patient experience?<br> <br>
-                            
-                            With this newfound curiosity, I embarked on a journey into the realm of coding. The transition from stethoscopes to lines of code was not without its challenges, but each challenge became a stepping stone. I enrolled in the ATLP coding program, ready to unravel the mysteries of programming languages and algorithms. <br> <br>
-                            The initial days were like learning a new language, decoding the syntax and understanding the logic that powered software. But with every line of code written, I discovered the joy of problem-solving and the immense satisfaction of seeing my creations come to life on the screen. <br> <br>
-                            Coding is more than a skill; it's a journey of continuous learning and growth. <br> <br>
-                            As a nurse, I witnessed firsthand the impact technology had on patient care. It was during those moments, surrounded by beeping machines and digital records, that I felt a spark of curiosity. What if I could contribute to healthcare not only at the bedside but also behind the scenes, shaping the very tools that enhance the patient experience?<br> <br>
-                            
-                            With this newfound curiosity, I embarked on a journey into the realm of coding. The transition from stethoscopes to lines of code was not without its challenges, but each challenge became a stepping stone. I enrolled in the ATLP coding program, ready to unravel the mysteries of programming languages and algorithms. <br> <br>
-                            The initial days were like learning a new language, decoding the syntax and understanding the logic that powered software. But with every line of code written, I discovered the joy of problem-solving and the immense satisfaction of seeing my creations come to life on the screen. <br> <br></p>
-                            <div class="footage">
-                                <div  class="like"><i class="fa-solid fa-thumbs-up"> 353</i></div>
-                                <div class="Dislike"><i class="fa-solid fa-thumbs-down">1</i></div>
-                                <a href="#"><strong>Add a comment...</strong></a>
-                            </div>
-                        </div>
-                            
-                </div>
-                    <div class="AuthorInfo">
-                        <img class="AuthorPic" src="Icons/NZAGWANEZA Anaclet -Passport.jpg" alt="Profile Picture">
-                        <span><strong>Anaclet Nzgneza <br></strong></span>
-                        <span>Full stuck engin.</span>
-                    </div>
+              <p>
+                <br />
+
+                What if I could contribute to healthcare not only at the bedside
+                but also behind the scenes, shaping the very tools that enhance
+                the patient experience?<br />
+                <br />
+
+                With this newfound curiosity, I embarked on a journey into the
+                realm of coding. The transition from stethoscopes to lines of
+                code was not without its challenges, but each challenge became a
+                stepping stone. I enrolled in the ATLP coding program, ready to
+                unravel the mysteries of programming languages and algorithms.
+                <br />
+                <br />
+                The initial days were like learning a new language, decoding the
+                syntax and understanding the logic that powered software. But
+                with every line of code written, I discovered the joy of
+                problem-solving and the immense satisfaction of seeing my
+                creations come to life on the screen. <br />
+                <br />
+                Coding is more than a skill; it's a journey of continuous
+                learning and growth. <br />
+                <br />
+                As a nurse, I witnessed firsthand the impact technology had on
+                patient care. It was during those moments, surrounded by beeping
+                machines and digital records, that I felt a spark of curiosity.
+                What if I could contribute to healthcare not only at the bedside
+                but also behind the scenes, shaping the very tools that enhance
+                the patient experience?<br />
+                <br />
+
+                With this newfound curiosity, I embarked on a journey into the
+                realm of coding. The transition from stethoscopes to lines of
+                code was not without its challenges, but each challenge became a
+                stepping stone. I enrolled in the ATLP coding program, ready to
+                unravel the mysteries of programming languages and algorithms.
+                <br /><br />
+                The initial days were like learning a new language, decoding the
+                syntax and understanding the logic that powered software. But
+                with every line of code written, I discovered the joy of
+                problem-solving and the immense satisfaction of seeing my
+                creations come to life... <br />
+                <br />
+              </p>
             </div>
-                <div class="art_right">
-                    <span><strong>Comments are below:</strong></span>
-                    <span>This section is empty</span>
-                </div>
+          </div>
+
+          <div class="art_right">
+            <span><strong>Comments are below:</strong></span>
+            <span>This section is empty</span>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+    <script src="sharelikecomment.js"></script>
+  </body>
 </html>

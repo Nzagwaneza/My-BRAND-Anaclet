@@ -1,0 +1,66 @@
+#myModal{
+    display: none;
+    width: 280px;
+    height: 60%;
+    border:  #6C9EFE solid;
+    padding: 1%;
+    z-index: 1;
+    position: fixed;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    border-radius:  0 0 14px 14px;
+    background-color: #ecf1f9;
+}
+
+#closeModal{
+    float: right;
+    font-size: 40px;
+    color: rgb(181, 28, 28);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+input{
+    margin: 5% 0% 5% 0%;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 06px;
+    border: none;
+    height: 3vh;
+}
+textarea{
+    border-radius: 2%;
+    font-size: 14px;
+    width: 100%;
+    
+}
+
+button{
+    width: 32%;
+    border-radius: 15%;
+    align-self: center;
+    margin-top: 2%;
+    margin-left: 33%;
+    color: white;
+    background-color: rgb(70, 70, 107);
+    align-self: center;
+    padding: 1%;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 18px;
+    padding-bottom: 12px ;
+}
+
+label{
+    font-size: 14px;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+  display: block;
+}

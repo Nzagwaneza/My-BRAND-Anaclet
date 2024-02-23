@@ -1,0 +1,105 @@
+/* Dashboard.css */
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f0f0;
+}
+
+
+.Header{
+  background-color: #6C9EFE;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dashboard-title {
+  font-size: 34px; 
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+
+.mainLeft {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainRight {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Logout{
+  width: 120px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+#articleText {
+  height: 47vh;
+}
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#articleText {
+  /* height: 47vh; */
+}
+
+/* Styling for inputs and textareas */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Footer styling */
+footer {
+  height: auto;
+  text-align: center;
+  margin-top: auto;
+  padding: 18px;
+  background-color: #6C9EFE;
+}
+
+/* Icon styling */
+i {
+  margin-right: 5px;
+}
+
+#goHome {
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  color: black;
+}

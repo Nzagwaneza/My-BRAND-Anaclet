@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #6C9EFE;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 20%;
+    display: flex;
+}
+
+
+.profilepic{
+    width: 100px;
+    height: 65px;
+    border-radius: 50%;
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+footer {
+    background: #6C9EFE;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+input, textarea{
+    border-radius: 6px;
+}

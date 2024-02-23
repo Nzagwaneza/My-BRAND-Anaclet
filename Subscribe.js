@@ -1,22 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('form');
-    var emailInput = document.querySelector('input[name="email"]');
-    var errorDiv = document.querySelector('.error'); // Select by class
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var email = emailInput.value.trim();
-        if (!isValidEmail(email)) {
-            errorDiv.textContent = 'Please enter a valid email address.';
-            errorDiv.style.color = 'red'; // Set color to red
-        } else {
-            errorDiv.textContent = ''; // Clear error message
-            form.submit(); // Submit the form if email is valid
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    var modalSubscribe = document.getElementById('myModalsubscribe');
+    var closeButtonSubscribe = document.getElementById('closeModalsubscribe');
+    var subscribeForm = document.getElementById('subscribeForm');
+    var emailInput = document.getElementById('email');
+    var emailError = document.getElementById('emailError');
+  
+    closeButtonSubscribe.addEventListener('click', function () {
+      modalSubscribe.style.display = "none";
     });
-
+  
+    document.getElementById('submitSubscribe').addEventListener('click', function () {
+      emailError.textContent = '';
+      if (!isValidEmail(emailInput.value)) {
+        displayErrorMessage("Please enter a valid email address");
+        return;
+      }
+      // If all validations pass, you can submit the form here
+      // For now, we're just logging a success message
+      console.log("Subscription successful!");
+    });
+  
     function isValidEmail(email) {
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
-});
+  
+    function displayErrorMessage(message) {
+      emailError.textContent = message;
+    }
+  });
+  

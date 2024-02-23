@@ -1,34 +1,44 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+    console.log("called moda")
   var nameInput = document.getElementById('full-name');
   var emailInput = document.getElementById('email');
   var messageInput = document.getElementById('message');
-  
-  var nameError = document.getElementById('nameError');
-  var emailError = document.getElementById('emailError');
-  var messageError = document.getElementById('messageError');
+  var errorBlocks = document.querySelectorAll('.error');
+  var form = document.getElementById('contactForm');
 
-  var isValidName = nameInput.value.trim().length >= 3;
-  var isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
-  var isValidMessage = messageInput.value.trim().length >= 10;
+  form.addEventListener('submit', function (event) {
+      event.preventDefault()
 
-  if (!isValidName) {
-    nameError.textContent = 'Please enter a name with at least 3 characters.';
-    event.preventDefault();
-  } else {
-    nameError.textContent = '';
+      errorBlocks.forEach(function (errorBlock) {
+          errorBlock.textContent = '';
+      });
+
+      if (!isValidName(nameInput.value)) {
+          displayErrorMessage("Name should be at least 4 characters and only contain letters", 'nameError');
+      }
+
+      if (!isValidEmail(emailInput.value)) {
+          displayErrorMessage("Please enter a valid email address", 'emailError');
+      }
+
+      if (!isValidMessage(messageInput.value)) {
+          displayErrorMessage("Message cannot be empty", 'messageError');
+      }
+  });
+
+  function isValidName(name) {
+      return name.length >= 4 && /^[a-zA-Z ]+$/.test(name);
   }
 
-  if (!isValidEmail) {
-    emailError.textContent = 'Please enter a valid email address.';
-    event.preventDefault();
-  } else {
-    emailError.textContent = '';
+  function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  if (!isValidMessage) {
-    messageError.textContent = 'Please enter a message with at least 10 characters.';
-    event.preventDefault();
-  } else {
-    messageError.textContent = '';
+  function isValidMessage(message) {
+      return message.trim() !== '';
   }
-});
+
+  function displayErrorMessage(message, errorId) {
+      var errorBlock = document.getElementById(errorId);
+      errorBlock.textContent = message;
+  }
+

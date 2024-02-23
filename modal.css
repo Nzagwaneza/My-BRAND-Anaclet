@@ -61,4 +61,6 @@ label{
 
 .error{
     color: red;
+    font-size: 10px;
+  display: block;
 }

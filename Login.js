@@ -3,19 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var passwordInput = document.getElementById('Password');
     var errorBlock = document.getElementById('errorBlock');
 
-    document.querySelector('.login').addEventListener('click', function (event) {
+    document.getElementById('loginButton').addEventListener('click', function (event) {
         errorBlock.textContent = '';
 
         if (!isValidUsername(usernameInput.value)) {
             displayErrorMessage("Username should be text");
-            event.preventDefault();
             return;
         }
 
         if (!isValidPassword(passwordInput.value)) {
             displayErrorMessage("Password should be at least 8 characters");
-            event.preventDefault();
             return;
+        }
+
+        // Check if the credentials are "Admin.anaclet" and "Admin"
+        if (usernameInput.value === "Adminanaclet" && passwordInput.value === "Admin1234") {
+            // Redirect to Dashboard.html
+            window.location.href = "Dashboard.html";
+        } else {
+            // Redirect to Home.html if credentials are incorrect
+            window.location.href = "Home.html";
         }
     });
 

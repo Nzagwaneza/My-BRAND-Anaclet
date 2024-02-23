@@ -48,89 +48,96 @@
           <a href="Skills.html">My skills</a>
           <a href="Articles.html">Articles</a>
         </div>
-    <div class="Titles">
-      <span><strong>The list of articles</strong></span>
-    </div>
-    <div class="Main">
-      <div class="main_area">
-        <div class="forAll_Articles">
-          <div class="Articlephoto1"></div>
-          <div class="remainingside">
-            <span><strong>My journal in coding life.</strong></span>
-            <div class="art_Right">
-              <img
-                class="Authorpic"
-                src="Icons/profilePic1.jpg"
-                alt="Author's Picture"
-              />
-              <div class="description">
-                <span><strong>Author's name:</strong> Anaclet Nzg</span>
-                <span><strong>Date uploaded:</strong> 02 Feb 2024</span>
-              </div>
+      </div>
+      <div class="Titles">
+        <span><strong>The list of articles</strong></span>
+      </div>
+      <div class="Main">
+        <div class="main_area">
+          <div class="forAll_Articles">
+            <div class="Articlephoto1">
+              <img id="mainPic" src="Icons/For article 1.png" alt="" />
             </div>
-            <button onclick="window.location.href = 'Articleview.html';">
-              View
-            </button>
+            <div class="remainingside">
+              <span id="title"
+                ><strong>My journal in coding life.</strong></span
+              >
+              <div class="art_Right">
+                <img
+                  class="Authorpic"
+                  id="Authorpic"
+                  src="Icons/profilePic1.jpg"
+                  alt="Author's Picture"
+                />
+                <div class="description">
+                  <span id="nameOfAuthor"
+                    ><strong>Author's name:</strong> Anaclet Nzg</span
+                  >
+                  <span id="uploadDate"
+                    ><strong>Date uploaded:</strong> 02 Feb 2024</span
+                  >
+                </div>
+              </div>
+              <button onclick="window.location.href = 'Articleview.html';">
+                View
+              </button>
+            </div>
           </div>
         </div>
-        <div class="forAll_Articles">
-          <div class="Articlephoto2"></div>
-          <div class="remainingside">
-            <span><strong>How to learn HTML and CSS.</strong></span>
-            <div class="art_Right">
-              <img
-                class="Authorpic"
-                src="Icons/For article 1.png"
-                alt="Author's Picture"
-              />
-              <div class="description">
-                <span><strong>Author's name:</strong> Ndizihiwe Eric</span>
-                <span><strong>Date uploaded:</strong> 18 Sept 2023</span>
-              </div>
-            </div>
-            <button>view</button>
-          </div>
-        </div>
-        <div class="forAll_Articles">
-          <div class="Articlephoto3"></div>
-          <div class="remainingside">
-            <span><strong>Mastering Figma.</strong></span>
-            <div class="art_Right">
-              <img
-                class="Authorpic"
-                src="Icons/For article 2.png"
-                alt="Author's Picture"
-              />
-              <div class="description">
-                <span><strong>Author's name:</strong> Rugamba R.</span>
-                <span><strong>Date uploaded:</strong> 23 May. 2023</span>
-              </div>
-            </div>
-            <button>view</button>
-          </div>
-        </div>
-        <div class="forAll_Articles">
-          <div class="Articlephoto4"></div>
-          <div class="remainingside">
-            <span><strong>Learn Github.</strong></span>
-            <div class="art_Right">
-              <img
-                class="Authorpic"
-                src="Icons/pic for article 4.JPG"
-                alt="Author's Picture"
-              />
-              <div class="description">
-                <span><strong>Author's name:</strong> Ndizihiwe Eric</span>
-                <span><strong>Date uploaded:</strong> 18 JUnE. 2023</span>
-              </div>
-            </div>
-            <button>view</button>
-          </div>
+        <div class="rightside">
+          <span><strong>Look at the preview here.</strong></span>
+          <div id="preview"></div>
         </div>
       </div>
-      <div class="rightside">
-        <span><strong>Look at the preview here.</strong></span>
-      </div>
     </div>
+    <!-- <script src="main.js"></script> -->
+    <script>
+      const articleDataString = localStorage.getItem("articleData");
+      const articleData = JSON.parse(articleDataString);
+
+      var authorName = articleData.authorName;
+      var uploadDate = articleData.uploadDate;
+      var title = articleData.title;
+      var summary = articleData.summary;
+      var articleText = articleData.articleText;
+      var profilePicture = articleData.profilePicture;
+      var mainPicture = articleData.mainPicture;
+
+      // Update elements with data from local storage
+      if (authorName) {
+        document.getElementById("nameOfAuthor").innerHTML =
+          "<strong>Author's name:</strong> " + authorName;
+      }
+
+      if (uploadDate) {
+        document.getElementById("uploadDate").innerHTML =
+          "<strong>Date uploaded:</strong> " + uploadDate;
+      }
+
+      if (title) {
+        document.getElementById("title").innerHTML =
+          "<strong>Title:</strong> " + title;
+      }
+
+      // if (summary) {
+      //   document.getElementById("summary").innerHTML =
+      //     "<strong>Summary:</strong> " + summary;
+      // }
+
+      // if (articleText) {
+      //   document.getElementById("articleText").innerHTML = articleText;
+      // }
+
+      if (profilePicture) {
+        console.log(profilePicture);
+        document.getElementById("Authorpic").src =
+          "file:///C:/Users/HP-/Downloads/" + profilePicture;
+      }
+
+      if (mainPicture) {
+        document.getElementById("mainPicture").src =
+          "file:///C:/Users/HP-/Downloads/" + mainPicture;
+      }
+    </script>
   </body>
 </html>

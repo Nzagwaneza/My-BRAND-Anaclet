@@ -10,7 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="Dashboard.css" />
+    <link rel="stylesheet" href="DashboardEdit.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -31,7 +31,12 @@
           <button onclick="adding()" class="Add">
             <i class="fas fa-plus"></i> Add Article
           </button>
-          <button onclick="deleting()" class="Delete">Modify Article</button>
+          <button onclick="editing()" class="Edit">
+            <i class="fas fa-edit"></i> Edit Article
+          </button>
+          <button onclick="deleting()" class="Delete">
+            <i class="fas fa-trash-alt"></i> Delete Article
+          </button>
         </div>
         <div>
           <a class="menu" id="users" href=""
@@ -87,7 +92,7 @@
         </div>
         <div id="bottomInput">
           <button id="submitButton">
-            <i class="fas fa-paper-plane"></i> Submit
+            <i class="fas fa-edit"></i> Submit Edition
           </button>
         </div>
       </div>
@@ -96,7 +101,6 @@
       <span>&copy; Anaclet's Brand. All rights reserved.</span>
     </footer>
     <script src="main.js"></script>
-    <!-- <script src="DashboardAdd.js"></script> -->
     <script>
       function adding() {
         window.location.href = "Dashboard.html";

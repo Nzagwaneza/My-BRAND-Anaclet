@@ -10,7 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="Dashboard.css" />
+    <link rel="stylesheet" href="DashboardDelete.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -31,7 +31,6 @@
           <button onclick="adding()" class="Add">
             <i class="fas fa-plus"></i> Add Article
           </button>
-          <button onclick="deleting()" class="Delete">Modify Article</button>
         </div>
         <div>
           <a class="menu" id="users" href=""
@@ -56,39 +55,19 @@
         </div>
       </div>
       <div class="mainRight">
-        <div id="topInputs">
-          <input type="text" id="textTitle" placeholder="Enter the title" />
-          <input
-            type="text"
-            id="Authorname"
-            placeholder="Enter the name of Author"
-          />
-          <label for="profilePicture">Upload Profile Picture</label>
-          <input type="file" id="profilePicture" accept="image/*" />
-          <br />
-          <label for="mainPicture">Upload a Picture</label>
-          <input type="file" id="mainPicture" accept="image/*" />
-        </div>
-        <div id="middleInput">
-          <textarea
-            name=""
-            id="Summary"
-            placeholder="Write the Article's Summary"
-          ></textarea>
-        </div>
-        <div id="bottomInput">
-          <div id="bottomText">
-            <textarea
-              name=""
-              id="articleText"
-              placeholder="Write the Article"
-            ></textarea>
+        <h3>List of all Articles</h3>
+        <div id="thisCanBeDeleted">
+          <div id="titleToDelete"></div>
+          <div id="modifyOption">
+            <button onclick="editing()" class="Edit">
+              <i class="fas fa-edit"></i> Edit Article
+            </button>
+            <div class="deleteButton">
+              <button onclick="deleting()" id="deleteButton">
+                <i class="fas fa-trash-alt"></i>Delete
+              </button>
+            </div>
           </div>
-        </div>
-        <div id="bottomInput">
-          <button id="submitButton">
-            <i class="fas fa-paper-plane"></i> Submit
-          </button>
         </div>
       </div>
     </div>
@@ -96,7 +75,6 @@
       <span>&copy; Anaclet's Brand. All rights reserved.</span>
     </footer>
     <script src="main.js"></script>
-    <!-- <script src="DashboardAdd.js"></script> -->
     <script>
       function adding() {
         window.location.href = "Dashboard.html";
@@ -104,12 +82,29 @@
       function editing() {
         window.location.href = "DashboardEdit.html";
       }
-      function deleting() {
-        window.location.href = "DashboardDelete.html";
+      function deleting(title) {
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          var articleData = JSON.parse(localStorage.getItem(key));
+          if (articleData && articleData.title === title) {
+            localStorage.removeItem(key);
+            break;
+          }
+        }
+
+        document.getElementById("thisCanBeDeleted").innerHTML = "";
+        var remainingsideElements = document.querySelectorAll(".remainingside");
+        remainingsideElements.forEach(function (element) {
+          element.innerHTML = "";
+        });
+
+        alert("Article deleted successfully!");
       }
+
       function logout() {
         window.location.href = "Login.html";
       }
     </script>
+    <script src="DashboardAdd.js"></script>
   </body>
 </html>

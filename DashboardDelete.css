@@ -1,7 +1,6 @@
 /* Dashboard.css */
 body, html {
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #f2f0f0;
@@ -24,6 +23,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   margin: 20px;
+  height: 70%;
 }
 
 
@@ -36,15 +36,37 @@ body, html {
 
 .mainRight {
   width: 65%;
+  height: 90%;
+  padding: 3px 1% 1% 1%;
+  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .Logout{
   width: 120px;
 }
 
+#modifyOption{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25%;
+  row-gap: 40px;
+  padding: 0%;
+}
+
+
+#thisCanBeDeleted{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  row-gap: 1%;
+  background-color: rgb(182, 212, 238);
+  padding: 0.5%;
+}
 a{
   text-decoration: none;
   color: black;
@@ -60,14 +82,18 @@ button {
   color: #fff;
 }
 
-button  {
+.deleting {
   margin-bottom: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #ff0000;
   color: #fff;
+}
+
+#deleteButton{
+  background-color: rgb(227, 70, 70);
 }
 
 #articleText {
@@ -79,25 +105,12 @@ button:hover {
   background-color: #cab052;
 }
 
-#articleText {
-  height: 37vh;
-  overflow-y: scroll;
-}
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
 
 footer {
   position:static;
   height: auto;
   text-align: center;
-  padding: 18px;
+  padding: 25px;
   background-color: #6C9EFE;
 }
 
@@ -109,6 +122,6 @@ i {
   color: black;
 }
 
-.Add, #submitButton{
-  background-color: rgb(23, 183, 95);
+.Delete{
+  background-color: rgb(227, 70, 70);
 }

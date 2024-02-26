@@ -172,6 +172,10 @@ a {
   margin-left: 15px;
 }
 
+#previewtext{
+  margin-bottom: 70px;
+}
+
 button {
   height: 26px;
   width: 113px;

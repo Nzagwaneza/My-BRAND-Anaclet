@@ -54,7 +54,7 @@
       </div>
       <div class="Main">
         <div class="main_area">
-          <div class="forAll_Articles">
+          <div onmouseover="previewContent()" class="forAll_Articles">
             <div class="Articlephoto1">
               <img id="mainPic" src="Icons/For article 1.png" alt="" />
             </div>
@@ -85,59 +85,105 @@
           </div>
         </div>
         <div class="rightside">
-          <span><strong>Look at the preview here.</strong></span>
+          <span
+            ><strong id="previewtext"
+              >Look at the preview here. <br />
+              <br /></strong
+          ></span>
           <div id="preview"></div>
         </div>
       </div>
     </div>
-    <!-- <script src="main.js"></script> -->
+
     <script>
       const articleDataString = localStorage.getItem("articleData");
       const articleData = JSON.parse(articleDataString);
 
-      var authorName = articleData.authorName;
-      var uploadDate = articleData.uploadDate;
-      var title = articleData.title;
-      var summary = articleData.summary;
-      var articleText = articleData.articleText;
-      var profilePicture = articleData.profilePicture;
-      var mainPicture = articleData.mainPicture;
+      if (articleData) {
+        const authorName = articleData.authorName;
+        const uploadDate = articleData.uploadDate;
+        const title = articleData.title;
+        const summary = articleData.summary;
+        const articleText = articleData.articleText;
+        const profilePicture = articleData.profilePicture;
+        const mainPicture = articleData.mainPicture;
 
-      // Update elements with data from local storage
-      if (authorName) {
-        document.getElementById("nameOfAuthor").innerHTML =
-          "<strong>Author's name:</strong> " + authorName;
+        if (authorName) {
+          document.getElementById("nameOfAuthor").innerHTML =
+            "<strong>Author's name:</strong> " + authorName;
+        }
+
+        if (uploadDate) {
+          document.getElementById("uploadDate").innerHTML =
+            "<strong>Date uploaded:</strong> " + uploadDate;
+        }
+
+        if (title) {
+          document.getElementById("title").innerHTML =
+            "<strong>Title:</strong> " + title;
+        }
+
+        if (summary) {
+          document.getElementById("preview").innerHTML = summary;
+        }
+
+        if (profilePicture) {
+          document.getElementById("Authorpic").src = profilePicture;
+        }
+
+        if (mainPicture) {
+          document.getElementById("mainPicture").src = mainPicture;
+        }
       }
 
-      if (uploadDate) {
-        document.getElementById("uploadDate").innerHTML =
-          "<strong>Date uploaded:</strong> " + uploadDate;
+      function previewContent() {
+        const summary = articleData
+          ? articleData.summary
+          : "No summary available";
+        document.getElementById("preview").innerHTML = summary;
       }
 
-      if (title) {
-        document.getElementById("title").innerHTML =
-          "<strong>Title:</strong> " + title;
+      function handleFormSubmission(event) {
+        event.preventDefault();
+
+        var title = document.getElementById("textTitle").value;
+        var authorName = document.getElementById("Authorname").value;
+        var summary = document.getElementById("Summary").value;
+        var articleText = document.getElementById("articleText").value;
+        var profilePicture = document.getElementById("profilePicture").files[0];
+        var mainPicture = document.getElementById("mainPicture").files[0];
+
+        var newDiv = document.createElement("div");
+        newDiv.className = "articleData";
+
+        newDiv.innerHTML = `
+            <h2>${title}</h2>
+            <p><strong>Author:</strong> ${authorName}</p>
+            <p>${summary}</p>
+            <p>${articleText}</p>
+            <img src="${
+              profilePicture ? URL.createObjectURL(profilePicture) : ""
+            }" alt="Profile Picture">
+            <img src="${
+              mainPicture ? URL.createObjectURL(mainPicture) : ""
+            }" alt="Main Picture">
+        `;
+
+        document.getElementById("articlesContainer").appendChild(newDiv);
+
+        document.getElementById("textTitle").value = "";
+        document.getElementById("Authorname").value = "";
+        document.getElementById("Summary").value = "";
+        document.getElementById("articleText").value = "";
+        document.getElementById("profilePicture").value = "";
+        document.getElementById("mainPicture").value = "";
+
+        alert("A new article has been added!");
       }
 
-      // if (summary) {
-      //   document.getElementById("summary").innerHTML =
-      //     "<strong>Summary:</strong> " + summary;
-      // }
-
-      // if (articleText) {
-      //   document.getElementById("articleText").innerHTML = articleText;
-      // }
-
-      if (profilePicture) {
-        console.log(profilePicture);
-        document.getElementById("Authorpic").src =
-          "file:///C:/Users/HP-/Downloads/" + profilePicture;
-      }
-
-      if (mainPicture) {
-        document.getElementById("mainPicture").src =
-          "file:///C:/Users/HP-/Downloads/" + mainPicture;
-      }
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", handleFormSubmission);
     </script>
   </body>
 </html>

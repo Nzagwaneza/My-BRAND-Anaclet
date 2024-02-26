@@ -1,7 +1,6 @@
 /* Dashboard.css */
 body, html {
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #f2f0f0;
@@ -60,13 +59,13 @@ button {
   color: #fff;
 }
 
-button  {
+#submitButton {
   margin-bottom: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: rgb(236, 218, 61);
   color: #fff;
 }
 
@@ -76,13 +75,14 @@ button  {
 
 
 button:hover {
-  background-color: #cab052;
+  background-color: #0056b3;
 }
 
 #articleText {
   height: 37vh;
   overflow-y: scroll;
 }
+
 input[type="text"],
 textarea {
   width: 100%;
@@ -109,6 +109,6 @@ i {
   color: black;
 }
 
-.Add, #submitButton{
-  background-color: rgb(23, 183, 95);
+.Edit{
+  background-color: rgb(236, 218, 61);
 }

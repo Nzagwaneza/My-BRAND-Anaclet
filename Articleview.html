@@ -64,38 +64,22 @@
             <a href="#" id="comment"><strong>Add a comment...</strong></a>
           </span>
         </div>
+        <div class="title">
+          <strong id="titleview">My journal in coding life</strong>
+        </div>
         <div class="supermain">
           <div class="art_center">
-            <div class="title">
-              <strong>My journal in coding life</strong>
-            </div>
-            <div>
-              <div class="combinedparagraph">
-                <div class="first_paragraph">
-                  Once upon a time, I walked the halls of hospitals in the noble
-                  profession of nursing. The world of healthcare was my domain,
-                  and caring for others was my daily rhythm. Little did I know
-                  that my path would take a fascinating turn, leading me into
-                  the intricate world of coding. As a nurse, I witnessed
-                  firsthand the impact technology had on patient care.It was
-                  during those moments, surrounded by beeping machines and
-                  digital records, that I felt a spark of curiosity.
-                </div>
-                <div class="AuthorInfo">
-                  <img
-                    class="AuthorPic"
-                    src="Icons/NZAGWANEZA Anaclet -Passport.jpg"
-                    alt="Profile Picture"
-                  />
-                  <span
-                    ><strong>Anaclet Nzagwaneza</strong> <br /><em
-                      >A full stuck enginineer.</em
-                    ></span
-                  >
-                </div>
-              </div>
+            <div id="articletextview" class="combinedparagraph">
+              <div class="first_paragraph">
+                Once upon a time, I walked the halls of hospitals in the noble
+                profession of nursing. The world of healthcare was my domain,
+                and caring for others was my daily rhythm. Little did I know
+                that my path would take a fascinating turn, leading me into the
+                intricate world of coding. As a nurse, I witnessed firsthand the
+                impact technology had on patient care.It was during those
+                moments, surrounded by beeping machines and digital records,
+                that I felt a spark of curiosity.
 
-              <p>
                 <br />
 
                 What if I could contribute to healthcare not only at the bedside
@@ -138,8 +122,20 @@
                 with every line of code written, I discovered the joy of
                 problem-solving and the immense satisfaction of seeing my
                 creations come to life... <br />
-                <br />
-              </p>
+              </div>
+              <div class="AuthorInfo">
+                <img
+                  id="authorpicview"
+                  class="AuthorPic"
+                  src="Icons/NZAGWANEZA Anaclet -Passport.jpg"
+                  alt="Profile Picture"
+                />
+                <span id="authornameview"
+                  ><strong>Anaclet Nzagwaneza</strong> <br /><em
+                    >A full stuck enginineer.</em
+                  ></span
+                >
+              </div>
             </div>
           </div>
 
@@ -151,5 +147,26 @@
       </div>
     </div>
     <script src="sharelikecomment.js"></script>
+    <script src="Articleview.js"></script>
+    <script>
+      function deleting(title) {
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          var articleData = JSON.parse(localStorage.getItem(key));
+          if (articleData && articleData.title === title) {
+            localStorage.removeItem(key);
+            break;
+          }
+        }
+
+        document.getElementById("thisCanBeDeleted").innerHTML = "";
+        var remainingsideElements = document.querySelectorAll(".remainingside");
+        remainingsideElements.forEach(function (element) {
+          element.innerHTML = "";
+        });
+
+        alert("Article deleted successfully!");
+      }
+    </script>
   </body>
 </html>
